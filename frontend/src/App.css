@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/unrecognizable-woman-shops-for-produce-in-royalty-free-image-871227828-1533830561.jpg");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .App-logo {

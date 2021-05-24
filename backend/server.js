@@ -36,6 +36,7 @@ app.get("/read", async (req, res) => {
 //Updating from Database
 app.put("/update", async (req, res) => {
   const newFoodName = req.body.newFoodName;
+
   const id = req.body.id;
 
   try {
