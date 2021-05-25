@@ -19,14 +19,16 @@ function Product() {
   const [visible, setvisible] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/read").then((response) => {
-      setfoodList(response.data);
-    });
+    axios
+      .get("https://shopping-grocery-list.herokuapp.com/read")
+      .then((response) => {
+        setfoodList(response.data);
+      });
   }, []);
 
   const addToList = () => {
     axios
-      .post("http://localhost:3001/insert", {
+      .post("https://shopping-grocery-list.herokuapp.com/insert", {
         foodName: foodName,
       })
       .then(() => {
@@ -36,7 +38,7 @@ function Product() {
 
   const updateFood = (id) => {
     axios
-      .put("http://localhost:3001/update", {
+      .put("https://shopping-grocery-list.herokuapp.com/update", {
         id: id,
         newFoodName: newFoodName,
       })
@@ -51,9 +53,11 @@ function Product() {
   };
 
   const deleteFood = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`, {}).then(() => {
-      window.location.reload(false);
-    });
+    axios
+      .delete(`https://shopping-grocery-list.herokuapp.com/delete/${id}`, {})
+      .then(() => {
+        window.location.reload(false);
+      });
   };
   return (
     <div>
